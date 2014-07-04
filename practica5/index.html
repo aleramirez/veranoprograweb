@@ -1,0 +1,84 @@
+<html>
+	<head>
+		<script src="js/jquery.min.js"></script>
+
+		<script>
+
+			$(document).ready(
+
+				function(){
+
+					alert($('#elemento1').css('fontSize'));
+					/*alert('Hola JavaScript');*/
+					$('#elemento1').css('fontSize', '100px'); // aumenta el tamaño en pixeles.
+					alert($('#elemento1').css('fontSize'));//avisa sobre lo que se ha hecho.
+					$('#elemento1').hide('slow');
+					$('#elemento1').show('slow');
+					$('#elemento1').click(
+							function(){
+								$(this).hide('slow');
+								$(this).show('slow');
+							}
+						);
+
+					$('h1').width('5px'); // establece el ancho de todos los elementos H1
+					alert($)
+					$('h1').height('20px');
+					$('h2').width('100px');
+
+					$('#elemento1').width(); // obtiene el ancho del primer elemento 
+					alert($("#elemento1").width());
+
+					$('h1').css({ 'fontSize' : '10px', 'color' : 'orange' }); // establece múltiples
+
+					$('h2').css({ 'fontSize' : '50px', 'color' : 'brown' }); // establece múltiples$('#elemento1').show('slow');
+
+					$('#boton').click(
+						function(){
+							alert($('#input1').val());
+						});
+
+					$('div:visible').parent(); // seleccionar el elemento contenedor
+					alert($)
+
+					$('h1').next('p');// seleccionar el inmediato y próximo elemento <p> con respecto a H1
+					alert($('h1').next('p'));
+
+					$('#boton1').click(
+						function(){
+							alert(parseInt($('#input2').val())+parseInt($('#input3').val()));
+						}
+
+						);
+
+
+				}
+			);
+
+		</script>
+
+		<input type="text" id="input1"></input>
+		<button id="boton">Aceptar</button>
+
+	</head>
+	
+	<body>
+		<div id="container" class="elemento2">
+			<h1 id="titulo">
+				<p class="parrafo" id="elemento1">java</p>
+			</h1>
+		</div>
+		<div>
+			<h1 class="titulo">jv</h1>
+			<h2 class="titulo">script</h2>
+		</div>
+		
+		<div>
+			<input type="text" id="input2">
+			<input type="text" id="input3">
+			<button id="boton1">Sumar</button>
+		</div>
+	
+	</body>
+
+</html>
