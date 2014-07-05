@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Examen 2 Programaci&oacute;n Web</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">    
+    <link href="css/jumbotron.css" rel="stylesheet">
+
+
+    <script src="js/jquery.min.js"></script>
+
+    <script>
+
+      $(document).ready(
+
+        function(){
+          $("#col1").hide();
+          $("#col2").hide();
+          $("#col3").hide();
+          $("#juga").hide('Slow');           
+
+          $("#forms").click(function(){
+              $("#col1").show('Slow'); 
+              $("#col2").show('Slow');           
+              $("#col3").show('Slow');
+              $("#entre").hide();
+              $("#juga").hide();           
+          });
+
+           $("#botentre").click(function(){
+              $("#entre").show('Slow'); 
+              $("#juga").hide('Slow');           
+          });
+
+            $("#botinte").click(function(){
+               
+              $("#juga").show('Slow'); 
+              $("#entre").hide('Slow');          
+          });
+          }
+      );
+
+    </script>
+
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <a class="navbar-brand" href="#">Project name</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right" role="form">
+            <div class="form-group">
+              <input type="text" placeholder="Email" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Password" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-success">Sign in</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Examen 2, 5 Julio 14</h1>
+        <button type="button" class="btn btn-primary" id="forms">Ver Formularios</button>
+      </div>
+    </div>
+
+    <div class="container">
+      
+      <div class="row">
+
+        <div class="col-md-4" id="col1">
+          <h2>Equipo</h2>
+            <button type="submit" class="btn btn-success" id="botequipo">Formulario Equipo</button>
+            <!-- <a class="btn btn-default" href="#" role="button">Formulario Equipo</a> -->
+            <br />
+                <form role="form">
+                  
+                  <div class="form-group">
+                      <label for="nombre">Nombre:</label>
+                      <input type="text" class="form-control" id="nombre" placeholder="Enter nombre">
+                  </div>
+
+                  <div class="form-group">
+                      <label for="id_pais">Pa&iacute;s:</label>
+                      <select class="form-control">
+                            <option>Elige uno:</option>
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                      </select>
+                  </div>
+
+                  <div class="form-group">
+                      <label for="escudo">Escudo del Equipo:</label>
+                      <input type="file" class="form-control" id="escudo" placeholder="Enter escudo">
+                  </div>
+
+                  <button type="button" class="btn btn-primary">Guardar</button>
+
+                </form>
+
+        </div>
+
+        <div class="col-md-4" id="col2">
+          <h2>Integrante</h2>
+             <button type="submit" class="btn btn-success" id="botinte">Formulario Integrante</button>
+           <!--  <a class="btn btn-default" href="#" role="button">Formulario Integrante</a> -->
+            <br />
+                <form role="form">
+                  
+                  <div class="form-group">
+                      <label for="nombre">Nombre del Integrante:</label>
+                      <input type="text" class="form-control" id="nombre" placeholder="Enter nombre">
+                  </div>
+
+                  <div class="form-group">
+                      <label for="apellido">Apellidos del Integrante:</label>
+                      <input type="text" class="form-control" id="apellido" placeholder="Enter apellidos">
+                  </div>
+
+                  <div class="form-group">
+                      <label for="edad">Edad del Integrante:</label>
+                      <input type="text" class="form-control" id="edad" placeholder="Enter edad">
+                  </div>
+
+                  <div class="form-group">
+                      <label for="peso">Peso del Integrante:</label>
+                      <input type="text" class="form-control" id="peso" placeholder="Enter peso">
+                  </div>
+
+                  <div class="form-group">
+                      <label for="estatura">Estatura del Integrante:</label>
+                      <input type="text" class="form-control" id="estatura" placeholder="Enter estatura">
+                  </div>
+
+                  <div class="form-group">
+                      <label for="id_equipo">Equipo:</label>
+                      <select class="form-control">
+                            <option>Elige uno:</option>
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                      </select>
+                  </div>
+
+                  <div class="form-group">
+                      <label for="foto">Foto del Integrante:</label>
+                      <input type="file" class="form-control" id="foto" placeholder="Enter foto">
+                  </div>
+
+                  <button type="button" class="btn btn-primary">Guardar</button>
+
+                </form>
+
+                <br />
+
+             <button type="submit" class="btn btn-success" id="botentre">Formulario Entrenador</button>
+            <!-- <a class="btn btn-default" href="#" role="button">Formulario Entrenador</a> -->
+           <!--  <br />
+                <form role="form">
+                  
+                  <div class="form-group">
+                      <label for="id_pais">Pa&iacute;s:</label>
+                      <select class="form-control">
+                            <option>Elige uno:</option>
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                      </select>
+                  </div>
+
+                  <button type="button" class="btn btn-primary">Guardar</button>
+
+                </form> -->
+
+            <br />
+            <br />
+             <button type="submit" class="btn btn-success" id="botinte">Formulario Jugador</button>
+            <!-- <a class="btn btn-default" href="#" role="button">Formulario Jugador</a> -->
+            <!-- <br />
+                <form role="form">
+                   <div class="form-group">
+                      <label for="numero_playera">Número de la Playera:</label>
+                      <input type="text" class="form-control" id="numero_playera" placeholder="Enter numero">
+                  </div>
+                  
+                  <div class="form-group">
+                      <label for="id_posicion">Posici&oacute;n del Jugador:</label>
+                      <select class="form-control">
+                            <option>Elige una:</option>
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                      </select>
+                  </div>
+                  
+                  <button type="button" class="btn btn-primary">Guardar</button>
+
+                </form> -->
+
+       </div>
+
+        <div class="col-md-4" id="col3">
+          <h2>Tipo de Integrante</h2>
+         
+            <!-- <a class="btn btn-default" href="#" role="button">Formulario Entrenador</a> -->
+            <br />
+                <form role="form">
+                  
+                  <div class="form-group" id="entre">
+                      <label for="id_pais">Pa&iacute;s:</label>
+                      <select class="form-control">
+                            <option>Elige uno:</option>
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                      </select>
+                  </div>
+
+                  
+
+                </form>
+
+            <br />
+            <br />
+             
+            <!-- <a class="btn btn-default" href="#" role="button">Formulario Jugador</a> -->
+            <br />
+                <form role="form">
+                   <div class="form-group" id="juga">
+                      <label for="numero_playera">Número de la Playera:</label>
+                      <input type="text" class="form-control" id="numero_playera" placeholder="Enter numero">
+                  </div>
+                  
+                  <div class="form-group">
+                      <label for="id_posicion">Posici&oacute;n del Jugador:</label>
+                      <select class="form-control">
+                            <option>Elige una:</option>
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                      </select>
+                  </div>
+                  
+                  
+
+                </form>
+        </div>
+      </div>
+
+      <hr>
+    </div> 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+  
+  </body>
+</html>

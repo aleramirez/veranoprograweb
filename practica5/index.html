@@ -26,8 +26,8 @@
 					$('h1').height('20px');
 					$('h2').width('100px');
 
-					$('#elemento1').width(); // obtiene el ancho del primer elemento 
-					alert($("#elemento1").width());
+					/*$('#elemento1').width(); // obtiene el ancho del primer elemento 
+					alert($("#elemento1").width());*/
 
 					$('h1').css({ 'fontSize' : '10px', 'color' : 'orange' }); // establece múltiples
 
@@ -38,11 +38,41 @@
 							alert($('#input1').val());
 						});
 
-					$('div:visible').parent(); // seleccionar el elemento contenedor
+					/*$('div:visible').parent(); // seleccionar el elemento contenedor
 					alert($)
+*/
+					/*$('h1').next('p');// seleccionar el inmediato y próximo elemento <p> con respecto a H1
+					alert($('h1').next('p'));*/
 
-					$('h1').next('p');// seleccionar el inmediato y próximo elemento <p> con respecto a H1
-					alert($('h1').next('p'));
+					/*1 pone en un tono mas claro dependiendo el valor que le demos 
+					lo que tiene el id="elemento1"*/ 
+					$("#elemento1").fadeTo("slow",0.33);
+
+					/*2 escribe el mensaje que le mandemos antes de lo que tiene la etiqueta parrafo*/
+					$("#elemento1").before("<p>hola!</p>");
+
+					/*3 limpia lo que tenga el id="titulo"*/
+					$("#titulo").empty();
+
+					/*4 limpia lo que tenga el id="titulo"*/
+					$(".titulo").css("background-color","black");
+
+					/*5 abre otra ventana"*/
+					window.open();
+
+					/*6 desaparece el elemento*/
+					$("#container").fadeOut();
+
+					/*7 */
+					$("input").keyup(function(){
+						var value =$(this).val();
+						$("p").text(value);
+					}
+						);
+
+
+					/*8*/
+					
 
 					$('#boton1').click(
 						function(){
@@ -50,8 +80,9 @@
 						}
 
 						);
+					
 
-
+					
 				}
 			);
 
