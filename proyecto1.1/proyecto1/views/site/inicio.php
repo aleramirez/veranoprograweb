@@ -1,95 +1,10 @@
-<?php 
-  session_start();
-  include ('../layouts/header.php');
-?>
+<?php include ('../layouts/header.php');?>
 
-
-   <!--    <div class="page-header">
-        <h1>Navbars</h1>
-      </div>
- -->
   <form id="accountForm" method="post" class="form-horizontal" action="">
-    <nav class="navbar navbar-default" role="navigation" style="background-color:#326295;" >
-      <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            <li><a href="#"><img src="images/img0.png"></a></li>
-            <li><a href="#"><img src="images/img1.png"></a></li>
-            <li><a href="#">Organizaci&oacute;n</a></li>
-            <li><a href="#">Desarrollo</a></li>
-            <li><a href="#">Gobierno</a></li>
-            <li><a href="#">Responsabilidad Social</a></li>
-
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">  <span class="glyphicon glyphicon-shopping-cart" ></span> / </a></li>
-            <li><a href="#">  <span class="glyphicon glyphicon-subtitles"></span>  </a></li>
-            <li><a href="#">  <span class="glyphicon glyphicon-hand-up"></span> /</a></li>
-            <li><a href="#">  <span class="glyphicon glyphicon-search"></span> / </a></li>
-            <li><a href="#">  <span class="glyphicon glyphicon-user"></span> </a></li>
-          </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
-    </nav>
-
-    <div class="container">
-      <div class="row">
-
-        <div class="col-md-2">
-          <img src="images/img2.png">
-
-        </div>
-        <div class="col-md-4">
-          <img src="images/img3.png">
-
-        </div>
-        <div class="col-md-6">
-          <img src="images/img4.png">
-
-        </div>
-
-
-      </div>
-    </div>
-
-     <div class="container">
-      <div class="row">
-
-        <div class="col-md-6">
-        </div>
-        <div class="col-md-6">
-          <ul class="nav nav-pills">
-            
-            <li><a href="#"><span class="glyphicon glyphicon-file"></span>Noticias</a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-camera"></span>Fotos</a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-facetime-video"></span>V&iacute;deos</a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-phone"></span>Juegos</a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-thumbs-up"></span>Actividad Social</a></li>            
-          </ul>          
-        </div>
-        
-      <div class="row">
-        <div class="col-md-12">
-          <ul class="nav nav-pills">
-            
-            <li><a href="#">Partidos<span class="glyphicon glyphicon-chevron-down"></span></a></li>
-            <li><a href="#">Equipos<span class="glyphicon glyphicon-chevron-down"></span></a></li>
-            <li><a href="#">Jugadores<span class="glyphicon glyphicon-chevron-down"></span></a></li>
-            <li><a href="#">Grupos<span class="glyphicon glyphicon-chevron-down"></span></a></li>
-            <li><a href="#">Estadisticas<span class="glyphicon glyphicon-chevron-down"></span></a></li> 
-            <li><a href="#">Premios<span class="glyphicon glyphicon-chevron-down"></span></a></li>
-            <li><a href="#">Entradas<span class="glyphicon glyphicon-chevron-down"></span></a></li>
-            <li><a href="#">Destino<span class="glyphicon glyphicon-chevron-down"></span></a></li>
-            <li><a href="#">Organizaci&oacute;n<span class="glyphicon glyphicon-chevron-down"></span></a></li>            
-          </ul>          
-        </div>
-      </div>
+ 
 
      <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-8"
           <h2>S&iacute;guenos en<img src="images/redes1.jpg" align="center" width="30%" height="30%"></img></h2>
         </div>  
 
@@ -97,7 +12,7 @@
 
       <div class="row">
          <div class="col-md-8">
-            <h2>Registros:<p><a class="btn btn-lg btn-success" href="index.php" role="button">Ver Formularios de Registro</a></p></h2>
+            <h2>Registros:<p><a class="btn btn-lg btn-success" href="formfifa.php" role="button">Ver Formulario de Registro</a></p></h2>
              <!--  <div class="col-md-8">
                 <h2>Registros:<p><a class="btn btn-lg btn-success" href="registro_ciudad.php" role="button">Ver Formulario de Registro</a></p></h2>
                 <h2>Registros:<p><a class="btn btn-lg btn-success" href="registro_continente.php" role="button">Ver Formulario de Registro</a></p></h2>
@@ -110,6 +25,20 @@
 
          <br>
 
+          <div class="row">
+            <label "col-lg-5" control-label>Fecha:</label></label>
+            <div class="col-lg-8">
+                <div class='input-group date' id='fecha'>
+                  <input type="text" class="form-control" name="meeting" />
+                  <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                  </span>
+                </div>
+                <span class="help-block">MM/DD/YYYY h:m A</span>
+
+            </div>
+          </div>
+
          <div class="col-md-4">   
            <a href="#"><span class="glyphicon glyphicon-thumbs-up"></span>Comp&aacute;rtelo</a>
          </div>  
@@ -118,17 +47,7 @@
 
      <br>
 
-     <div class="row">
-    <div class="col-md-8">
-      <h2>Fecha:</h2>
-        <div class='input-group date' id='datetimepicker' data-date-format="YYYY/MM/DD">
-            <input type="text" class="form-control" name="fecha" />
-            <span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
-        </div>
-
-    </div>
-
-     <br>
+  
 
     <div class="col-md-4">
       <a href="#"><span class="glyphicon glyphicon-time"></span>Cambiar a tu zona horaria</a>
@@ -193,7 +112,7 @@
         <a href="#"><img src="images/costa.jpg" align="center" width="100%" height="100%"></img></a>
         <br>
         <h2>COSTA RICA</h2>
-        <a href="#">CR&OACUTE;NICA DE UN PENAL ANUNCIADO</a>
+        <a href="#">CR&Oacute;NICA DE UN PENAL ANUNCIADO</a>
         <h2>mi&eacute;rcoles 2 julio 2014</h2>
 
       </div>  
@@ -234,7 +153,7 @@
       <div class="col-md-4">
         <a href="#"><img src="images/r1.jpg" align="center" width="20%" height="20%"></img></a>
         <br>
-        <h2>PA&IACUTE;SES BAJOS</h2>
+        <h2>PA&Icute;SES BAJOS</h2>
         <a href="#">Robben: "Me estoy divirtiendo mucho"</a>
         <h2>mi&eacute;rcoles 2 julio 2014</h2>
       </div>  
@@ -362,7 +281,7 @@
       <br>
       <img src="images/2338253_large-lnd.jpg" align="center" width="50%" height="50%"></img>
       <br>  
-      <a href="#">F&UACUTE;TBOL FANTASY 2014</a>
+      <a href="#">F&Uacute;TBOL FANTASY 2014</a>
     </div>
 
     <div class="col-md-3">
@@ -802,74 +721,7 @@
 
     </form>
 
-    <nav class="navbar navbar-default" role="navigation" style="background-color:#326295;" >
-      <div class="container-fluid">
-        
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            <li><a href="#"><img src="images/next.png"></a></li>
-            <li><a href="#">T&eacute;rminos del servicio /</a></li>
-            <li><a href="#">Pol&iacute;ticas de privacidad /</a></li>
-            <li><a href="#">Desc&aacute;rgalo /</a></li>
-            <li><a href="#">Contacto con la FIFA /</a></li>
-            <li><a href="#">Versi&oacute;n Celular</a></li>
+     <br>
 
-          </ul>
-        </div>
-
-         <div class="row">
-          
-          <div class="col-md-6">
-            <h5>Copyright© 1994 - 2014 FIFA. Reservados todos los derechos</h5>
-          </div>
-
-           <div class="col-md-6">
-            <h5>Plataformas Sociales Oficiales de la FIFA<img src="images/redes.jpg" align="center" width="40%" height="40%"></h5>
-          </div>
-
-      </div>
-
-
-        <script type="text/javascript">
-            $(function () {
-                $('#datetimepicker').datetimepicker({
-                    language: 'es'
-                });
-            });
-        </script>
-
-        <script type="text/javascript">
-            $(function () {
-                $('#datetimepicker').datetimepicker({
-                    pickTime:false
-                });
-            });
-         </script>
-
-        <script>
-          $(document).ready(function){
-            $('accountForm').bootstrapValidator({
-              excluded: [':disabled'],
-              feedbackIcons: {
-                valid:'glyphicon glyphicon-ok',
-                invalid:'glyphicon glyphicon-remove',
-                validating:'glyphicon-refresh'
-              },
-
-              fields:{
-                fecha:{
-                  validators:{
-                    notEmpty:{
-                      message: 'La fecha es requerida'
-                    }
-                  }
-                }
-              }
-            })
-
-          });
-
-        </script>
-    
-     
+ 
 <?php include ('../layouts/footer.php'); ?>
