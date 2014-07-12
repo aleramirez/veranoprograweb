@@ -12,33 +12,27 @@
     <link rel="icon" href="favicon.ico">
     <script type="text/javascript" src="../js/jquery.min.js"></script>
     <script type="text/javascript" src="../js/jquery.fancybox.pack.js"></script>
-    <link href="css/jquery.fancybox.css" rel="stylesheet" type="text/css" media="screen" />    
-    <title>Clase programación web verano</title>
+    <link href="../css/jquery.fancybox.css" rel="stylesheet" type="text/css" media="screen" />    
 
     <!-- Bootstrap -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/bootstrapValidator.min.css"/>
-    <link rel="stylesheet" href="../css/style.css">
-    <link href="../css/justified-nav.css" rel="stylesheet">
-    <link  rel = "stylesheet"  href = "../css/jquery.fancybox.css"  type = "text/css"  media = "screen"  /> 
+    <link href="../css/bootstrapValidator.min.css"/>
+    <link href="../css/style.css" rel="stylesheet">
     <link href="../css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <link href="../css/mi.css" rel="stylesheet">
-
+    <link href="../css/micss.css" rel="stylesheet">
+    <link href="../css/justified-nav.css" rel="stylesheet">
+  
     <script src="../js/moment.min.js"></script>
     <script src="../js/bootstrap-datetimepicker.min.js"></script>
     <script src="../js/jquery.raty.min.js"></script>
 
+    <!-- <link href="../js/offcanvas.js" rel="stylesheet"> -->
     <link href="../css/offcanvas.css" rel="stylesheet">
+    <title>Clase programación web verano</title>
   </head>
 
   <body role="document">
+  <!--INICIO NAVBAR-->
 
     <!-- Fixed navbar -->
     <nav class="navbar navbar-default" role="navigation" style="background-color:#326295;" >
@@ -120,11 +114,12 @@
         </div>
       </div>
 
+     
+
     </div>
-
-
-      
-
     
-    <!-- <div class="container theme-showcase" role="main"> -->
-    <div class="container-fluid" role="main">
+
+     <!--FIN NAVBAR-->
+
+
+    <div class="container">

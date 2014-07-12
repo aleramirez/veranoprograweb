@@ -1,40 +1,25 @@
  
- 	<footer>
- 		  <nav class="navbar navbar-default" role="navigation" style="background-color:#326295;" >
-      <div class="container-fluid">
-        
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            <li><a href="#"><img src="images/next.png"></a></li>
-            <li><a href="#">T&eacute;rminos del servicio /</a></li>
-            <li><a href="#">Pol&iacute;ticas de privacidad /</a></li>
-            <li><a href="#">Desc&aacute;rgalo /</a></li>
-            <li><a href="#">Contacto con la FIFA /</a></li>
-            <li><a href="#">Versi&oacute;n Celular</a></li>
+  <div class="row">
 
-          </ul>
-        </div>
+    <div class="col-md-9">
+      <hr>
+        <p class="text-center">
 
-         <div class="row">
-          
-          <div class="col-md-6">
-            <h5>Copyright© 1994 - 2014 FIFA. Reservados todos los derechos</h5>
-          </div>
+          Clase de Programacion Web. <br><span class="glyphicon glyphicon-registration-mark"></span>
 
-           <div class="col-md-6">
-            <h5>Plataformas Sociales Oficiales de la FIFA<img src="images/redes.jpg" align="center" width="40%" height="40%"></h5>
-          </div>
+          <?php
+            echo date('Y');
+          ?>
 
-      </div>
+        </p>
+    </div>
 
-       </nav>
+  </div>
 
-    </footer>
- </div>
 
 	 <script type="text/javascript">
-	 	$(document).ready(function)({
-	 		$("accountForm").fancybox({
+	 	$(document).ready(function(){
+	 		$(".accountForm").fancybox({
 	 			'autoScale':false,
 	 			'transitionIn':'none',
 	 			'transitionOut':'none',
@@ -47,29 +32,126 @@
 	 </script>
 
 	  <script>
-	 	$(document).ready(function)({
-	 		$("accountForm").bootstrapValidator({
+	 	 $(document).ready(function(){
+	 		$("#formreg").bootstrapValidator({
+        excluded: [':disabled'],
 	 			feefbackIcons:{
 	 				valid:'glyphicon glyphicon-ok',
 	                invalid: 'glyphicon glyphicon-remove',
 	                validating: 'glyphicon glyphicon-refresh'
-           		 }
-	 			}
+           		 },
+          fields: {
+              nombre: {
+                  validators: {
+                      notEmpty: {
+                          message: 'El nombre es requerido'
+                      }
+                  }
+              },
+              idcontinente: {
+                  validators: {
+                      notEmpty: {
+                         message: 'El idcontinente es requerido'
+                      }
+                  }
+              },
+              bandera: {
+                  validators: {
+                      notEmpty: {
+                         message: 'La bandera es requerida'
+                      }
+                  }
+              },
+              idpais: {
+                  validators: {
+                      notEmpty: {
+                         message: 'El idpais es requerido'
+                      }
+                  }
+              },
+              escudo: {
+                  validators: {
+                      notEmpty: {
+                         message: 'El escudo es requerido'
+                      }
+                  }
+              },
+              idequipo: {
+                  validators: {
+                      notEmpty: {
+                         message: 'El idequipo es requerido'
+                      }
+                  }
+              },
+              Edad: {
+                  validators: {
+                      notEmpty: {
+                         message: 'La edad es requerida'
+                      }
+                  }
+              },
+              foto: {
+                  validators: {
+                      notEmpty: {
+                         message: 'La foto es requerida'
+                      }
+                  }
+              },
+              estatura: {
+                  validators: {
+                      notEmpty: {
+                         message: 'La estatura es requerida'
+                      }
+                  }
+              },
+              peso: {
+                  validators: {
+                      notEmpty: {
+                         message: 'El peso es requerido'
+                      }
+                  }
+              },
+              apellido: {
+                  validators: {
+                      notEmpty: {
+                         message: 'El apellido es requerido'
+                      }
+                  }
+              },
+              abreviatura: {
+                  validators: {
+                      notEmpty: {
+                         message: 'La abreviatura es requerida'
+                      }
+                  }
+              },
+              idciudad: {
+                  validators: {
+                      notEmpty: {
+                         message: 'El idciudad es requerido'
+                      }
+                  }
+              },
+          }
+      
+
+	 			
 	 		});
 
 	 	});
 	 </script>
 
 	 <script>
-	 	$(document).ready(function)({
-	 		$('#fecha').bootstrapValidator({
-         excluded: [':disabled'],
-	 			feedbackIcons: {
-		 			valid:'glyphicon glyphicon-ok',
-		            invalid: 'glyphicon glyphicon-remove',
-		            validating: 'glyphicon glyphicon-refresh'
-	 		},
-	 		fields: {
+	 	$(document).ready(function() {
+      $('#fecha').datetimepicker();
+
+      $('#fechaform').bootstrapValidator({
+          feedbackIcons: {
+              valid: 'glyphicon glyphicon-ok',
+              invalid: 'glyphicon glyphicon-remove',
+              validating: 'glyphicon glyphicon-refresh'
+          },
+          fields: {
               meeting: {
                   validators: {
                       date: {
@@ -79,250 +161,60 @@
                   }
               }
           }
-	 			
-	 		});
+      });
 
-	 	});
+      $('#datetimePicker')
+          .on('dp.change dp.show', function(e) {
+              // Validate the date when user change it
+              $('#meetingForm')
+                  // Get the bootstrapValidator instance
+                  .data('bootstrapValidator')
+                  // Mark the field as not validated, so it'll be re-validated when the user change date
+                  .updateStatus('meeting', 'NOT_VALIDATED', null)
+                  // Validate the field
+                  .validateField('meeting');
+          });
+
+    });
+
 	 </script>	
 
-  <script>
-    $(document).ready(function)({
-      $('#formconti').bootstrapValidator({
-        excluded: [':disabled'],
-        feedbackIcons: {
-          valid:'glyphicon glyphicon-ok',
-                invalid: 'glyphicon glyphicon-remove',
-                validating: 'glyphicon glyphicon-refresh'
-      },
-      fields: {
-              nombre: {
-                  validators: {
-                      notEmpty: {
-                          message: 'El nombre es requerido'
-                      }
-                  }
-              }
-          }
-        
-      });
-
-    });
-  </script>  
-
-  <script>
-    $(document).ready(function)({
-      $('#formequi').bootstrapValidator({
-        excluded: [':disabled'],
-        feedbackIcons: {
-          valid:'glyphicon glyphicon-ok',
-                invalid: 'glyphicon glyphicon-remove',
-                validating: 'glyphicon glyphicon-refresh'
-      },
-      fields: {
-              nombre: {
-                  validators: {
-                      notEmpty: {
-                          message: 'El nombre es requerido'
-                      }
-                  }
-              },
-         
-              idpais: {
-                  validators: {
-                      notEmpty: {
-                          message: 'El idpais es requerido'
-                      }
-                  }
-              },
-              escudo: {
-                  validators: {
-                      notEmpty: {
-                          message: 'El escudo es requerido'
-                      }
-                  }
-              }
-          }
-        
-      });
-
-    });
-  </script>  
 
    <script>
-    $(document).ready(function)({
-      $('#formesta').bootstrapValidator({
-        excluded: [':disabled'],
-        feedbackIcons: {
-          valid:'glyphicon glyphicon-ok',
-                invalid: 'glyphicon glyphicon-remove',
-                validating: 'glyphicon glyphicon-refresh'
-      },
-      fields: {
-              Nombre: {
-                  validators: {
-                      notEmpty: {
-                          message: 'El nombre es requerido'
-                      }
-                  }
-              }
-          }
-        
-      });
-
-    });
-  </script>
-
-   <script>
-    $(document).ready(function)({
-      $('#forminte').bootstrapValidator({
-        excluded: [':disabled'],
-        feedbackIcons: {
-          valid:'glyphicon glyphicon-ok',
-                invalid: 'glyphicon glyphicon-remove',
-                validating: 'glyphicon glyphicon-refresh'
-      },
-      fields: {
-              nombre: {
-                  validators: {
-                      notEmpty: {
-                          message: 'El nombre es requerido'
-                      }
-                  }
-              },
-               apellido: {
-                  validators: {
-                      notEmpty: {
-                          message: 'El apellido es requerido'
-                      }
-                  }
-              },
-               peso: {
-                  validators: {
-                      notEmpty: {
-                          message: 'El peso es requerido'
-                      }
-                  }
-              },
-               estatura: {
-                  validators: {
-                      notEmpty: {
-                          message: 'La estatura es requerida'
-                      }
-                  }
-              },
-               foto: {
-                  validators: {
-                      notEmpty: {
-                          message: 'La fot} es requerida'
-                      }
-                  }
-              },
-               Edad: {
-                  validators: {
-                      notEmpty: {
-                          message: 'La edad es requerida'
-                      }
-                  }
-              },
-               idequipo: {
-                  validators: {
-                      notEmpty: {
-                          message: 'El idequipo es requerido'
-                      }
-                  }
-              }
-          }
-        
-      });
-
-    });
-  </script> 
-
-  <script>
-    $(document).ready(function)({
-      $('#formpa').bootstrapValidator({
-        excluded: [':disabled'],
-        feedbackIcons: {
-          valid:'glyphicon glyphicon-ok',
-                invalid: 'glyphicon glyphicon-remove',
-                validating: 'glyphicon glyphicon-refresh'
-      },
-      fields: {
-              nombre: {
-                  validators: {
-                      notEmpty: {
-                          message: 'El nombre es requerido'
-                      }
-                  }
-              },
-              bandera: {
-                  validators: {
-                      notEmpty: {
-                          message: 'La bandera es requerida'
-                      }
-                  }
-              },
-              idcontinente: {
-                  validators: {
-                      notEmpty: {
-                          message: 'El continente es requerido'
-                      }
-                  }
-              }
-          }
-        
-      });
-
-    });
-  </script>   
-
-  <script>
-    $(document).ready(function)({
-      $('#formpa').bootstrapValidator({
-        excluded: [':disabled'],
-        feedbackIcons: {
-          valid:'glyphicon glyphicon-ok',
-                invalid: 'glyphicon glyphicon-remove',
-                validating: 'glyphicon glyphicon-refresh'
-      },
-      fields: {
-              nombre: {
-                  validators: {
-                      notEmpty: {
-                          message: 'El nombre es requerido'
-                      }
-                  }
-              },
-              abreviatura: {
-                  validators: {
-                      notEmpty: {
-                          message: 'La abreviatura es requerida'
-                      }
-                  }
-              }
-          }
-        
-      });
-
-    });
-  </script>   
-
-
-
- </div> <!-- /container -->
-
+      $(document).ready(function() {
+          $('#ratyForm')
+              .bootstrapValidator({
+                  // The disabled elements are excluded
+                  // Hidden elements (including the rating star) are included
+                  excluded: ':disabled',
+                  feedbackIcons: {
+                      valid: 'glyphicon glyphicon-ok',
+                      invalid: 'glyphicon glyphicon-remove',
+                      validating: 'glyphicon glyphicon-refresh'
+                  },
+                  fields: {
+                      directorio: {
+                          validators: {
+                              notEmpty: {
+                                  message: 'El directorio es requerido'
+                              }
+                          }
+                      },
+                          editorial: {
+                          validators: {
+                              notEmpty: {
+                                  message: 'La editorial es requerida'
+                              }
+                          }
+                      },      
+            }
+        });
+});
+</script>
 
  
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="js/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>  
+    <script src="../js/bootstrap.min.js"></script>
     <script src="../js/bootstrapValidator.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap-datetimepicker.js"></script>
-    <script type="text/javascript" src="js/bootstrap-datetimepicker.es.js"></script>
-    <script  type = "text/javascript"  src = "js/jquery.fancybox.pack.js" ></script>
 
   </body>
 </html>

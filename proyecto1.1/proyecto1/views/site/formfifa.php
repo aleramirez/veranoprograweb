@@ -26,53 +26,6 @@
 
         			<form id="accountForm" method="post" class="form-horizontal">
             
-            			<div class="tab-content">
-							<div class="tab-pane active" id="info-tab">
-
-			                    <div class="form-group">
-			                        <label class="col-lg-3 control-label">Nombre:</label>
-			                        <div class="col-lg-5">
-			                            <input type="text" class="form-control" name="nombre" />
-			                        </div>
-			                    </div>
-
-			                    <div class="form-group">
-			                        <label class="col-lg-3 control-label">Portada:</label>
-			                        <div class="col-lg-5">
-			                            <input type="field" class="form-control" name="portada" />
-			                        </div>
-			                    </div>
-
-			                    <div class="form-group">
-			                        <label class="col-lg-3 control-label">Fecha:</label>
-			                        <div class="col-lg-5">
-			                        	<div class='input-group date' id='datetimepicker' data-date-format="YYYY/MM/DD">
-			                            	<input type="text" class="form-control" name="fecha" />
-			                            	<span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
-			                        	</div>
-			                        </div>
-			                    </div>
-
-			                    <div class="form-group">
-			                        <label class="col-lg-3 control-label">Volumen:</label>
-			                        <div class="col-lg-5">
-			                            <input type="text" class="form-control" name="volumen" />
-			                        </div>
-			                    </div>
-
-			                    <div class="form-group">
-			                        <label class="col-lg-3 control-label">T&iacute;tulo:</label>
-			                        <div class="col-lg-5">
-			                            <input type="text" class="form-control" name="titulo" />
-			                        </div>
-			                    </div>
-
-			                    <div class="form-group">
-			                        <label class="col-lg-3 control-label">Subt&iacute;tulo:</label>
-			                        <div class="col-lg-5">
-			                            <input type="text" class="form-control" name="subtitulo" />
-			                        </div>
-			                    </div>
 
 			                    <div class="form-group">
 			                        <label class="col-lg-3 control-label">N&uacute;mero:</label>
@@ -81,49 +34,29 @@
 			                        </div>
 			                    </div>
 
-			                     <div class="form-group">
-			                        <label class="col-lg-3 control-label">Clave:</label>
+			                    <div class="form-group">
+			                        <label class="col-lg-3 control-label">Id_Integrante:</label>
 			                        <div class="col-lg-5">
-			                            <input type="text" class="form-control" name="clave" />
+			                            <input type="text" class="form-control" name="idintegrante" />
 			                        </div>
 			                    </div>
 
-			                     <div class="form-group">
-			                        <label class="col-lg-3 control-label">Directorio:</label>
-			                        <div class="col-lg-3">
-			                            <textarea rows="6" class="form-control" name="directorio"> </textarea>
-			                        </div>
-			                    </div>
-
-			                     <div class="form-group">
-			                        <label class="col-lg-3 control-label">Editorial:</label>
-			                        <div class="col-lg-3">
-			                            <textarea rows="6" class="form-control" name="editorial"> </textarea>
-			                        </div>
-			                    </div>
+			      
 
 			                    <div class="form-group">
-                        			<label class="col-lg-3 control-label">Id_Status</label>
-                        			<div class="col-lg-3">
-                            			<select class="form-control" name="id_status">
-			                                <option value="">Select a status</option>
-			                                <option value="1">Estreno</option>
-			                                <option value="2">Sin existencias</option>
-			                                <option value="3">Rentada</option>
-			                                <option value="4">Proximamente</option>
-                            			</select>
-                        			</div>
-                    			</div>
-
+			                        <label class="col-lg-3 control-label">Id_Posici&oacute;n:</label>
+			                        <div class="col-lg-5">
+			                            <input type="text" class="form-control" name="idposicion" />
+			                        </div>
+			                    </div>
+			          
                     			<div class="form-group">
 					                <div class="col-lg-5 col-lg-offset-3">
 					                    <button type="submit" class="btn btn-primary">Validar</button>
 					                </div>
            						 </div>
 
-                    		</div>
-
-						</div>
+                    		
 
 					</form>
 
@@ -172,21 +105,7 @@
                   },
 
                 fields: {
-		                nombre: {
-		                    validators: {
-		                        notEmpty: {
-		                            message: 'El nombre es requerido'
-		                        }
-		                    }
-		                },
-
-		                portada: {
-		                    validators: {
-		                        notEmpty: {
-		                            message: 'La portada es requerida'
-		                        }
-		                    }
-		                },
+		                
 
 		                fecha: {
 		                    validators: {
@@ -196,30 +115,7 @@
 		                    }
 		                },
 
-		                volumen: {
-		                    validators: {
-		                        notEmpty: {
-		                            message: 'El volumen  es requerido'
-		                        }
-		                    }
-		                },
-
-		                titulo: {
-		                    validators: {
-		                        notEmpty: {
-		                            message: 'El titulo es requerido'
-		                        }
-		                    }
-		                },
-
-		                subtitulo: {
-		                    validators: {
-		                        notEmpty: {
-		                            message: 'El subtitulo es requerido'
-		                        }
-		                    }
-		                },
-
+		                
 		                numero: {
 		                    validators: {
 		                        notEmpty: {
@@ -228,41 +124,23 @@
 		                    }
 		                },
 
-		                clave: {
-		                    validators: {
-		                        notEmpty: {
-		                            message: 'La clave es requerida'
-		                        }
-		                    }
-		                },
+		                idintegrante: {
+			                  validators: {
+			                      notEmpty: {
+			                          message: 'El idintegrante es requerido'
+			                      }
+			                  }
+			              },
 
-		                directorio: {
-		                    validators: {
-		                        notEmpty: {
-		                            message: 'El directorio es requerido'
-		                        }
-		                    }
-		                },
-
-		                editorial: {
-		                    validators: {
-		                        notEmpty: {
-		                            message: 'La editorial es requerida'
-		                        }
-		                    }
-		                },
-
-		                id_status: {
-		                    validators: {
-		                        notEmpty: {
-		                            message: 'El id_status es requerido'
-		                        }
-		                    }
-		                }
-
-
+			            idposicion: {
+			                  validators: {
+			                      notEmpty: {
+			                          message: 'El idposicion es requerido'
+			                      }
+			                  }
+			              }
 		    }
-			})
+			});
 		       
 		});
 		   

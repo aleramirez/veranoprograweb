@@ -1,5 +1,19 @@
 <?php include ('../layouts/header.php');?>
 
+ <div class="row">
+        <div class="col-md-8">
+            <h1>Formularios:</h1>
+          <ul class="nav nav-pills">
+            <li><a href="registro_continente"><span class="glyphicon glyphicon-file"></span>Continente:</a></li>
+            <li><a href="registro_pais"><span class="glyphicon glyphicon-file"></span>Pa&iacute;s:</a></li>
+            <li><a href="registro_estadio"><span class="glyphicon glyphicon-file"></span>Estadio:</a></li>
+            <li><a href="registro_equipo"><span class="glyphicon glyphicon-file"></span>Equipo:</a></li>
+            <li><a href="registro_posicion"><span class="glyphicon glyphicon-file"></span>Posici&oacute;n:</a></li>
+            <li><a href="registro_integrante"><span class="glyphicon glyphicon-file"></span>Integrante:</a></li>
+          </ul>          
+        </div>
+      <!-- </div> -->
+
   <form id="accountForm" method="post" class="form-horizontal" action="">
  
 
@@ -23,10 +37,10 @@
         </div>  
       </div>  
 
-         <br>
 
           <div class="row">
-            <label "col-lg-5" control-label>Fecha:</label></label>
+            <label "col-lg-10" control-label>Fecha:</label></label>
+            <div class="row">
             <div class="col-lg-8">
                 <div class='input-group date' id='fecha'>
                   <input type="text" class="form-control" name="meeting" />
@@ -34,7 +48,7 @@
                     <span class="glyphicon glyphicon-calendar"></span>
                   </span>
                 </div>
-                <span class="help-block">MM/DD/YYYY h:m A</span>
+                <span class="help-block">Formato sugerido para este campo:MM/DD/YYYY h:m </span>
 
             </div>
           </div>
