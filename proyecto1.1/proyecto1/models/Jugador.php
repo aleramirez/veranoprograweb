@@ -1,6 +1,6 @@
 <?php
 
-class Usuario extends Modelo{
+class Jugador extends Modelo{
     public $nombre_tabla = 'jugador';
     public $pk = 'idjugador';
     
@@ -39,7 +39,7 @@ class Usuario extends Modelo{
 
         $er = new Er();
         
-        if ( !$er->valida_email($valor) ){
+        if ( !$er->valida_numero($valor) ){
             $this->errores[] = "Este numero (".$valor.") no es valido";
         }
             $this->numero = trim($valor);
@@ -54,7 +54,7 @@ class Usuario extends Modelo{
 
         $er = new Er();
         
-        if ( !$er->valida_email($valor) ){
+        if ( !$er->valida_ids($valor) ){
             $this->errores[] = "Este idintegrante (".$valor.") no es valido";
 
         $this->idintegrante = trim($valor);
@@ -68,7 +68,7 @@ class Usuario extends Modelo{
 
         $er = new Er();
         
-        if ( !$er->valida_email($valor) ){
+        if ( !$er->valida_ids($valor) ){
             $this->errores[] = "Este idposicion (".$valor.") no es valido";
 
         $this->idposicion = trim($valor);

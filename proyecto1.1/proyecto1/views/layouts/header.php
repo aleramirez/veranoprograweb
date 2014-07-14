@@ -51,7 +51,7 @@
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">  <span class="glyphicon glyphicon-shopping-cart" ></span> / </a></li>
-            <li><a href="#">  <span class="glyphicon glyphicon-subtitles"></span>  </a></li>
+            <li><a href="#">  <span class="glyphicon glyphicon-subtitles"></span> / </a></li>
             <li><a href="#">  <span class="glyphicon glyphicon-hand-up"></span> /</a></li>
             <li><a href="#">  <span class="glyphicon glyphicon-search"></span> / </a></li>
             <li><a href="#">  <span class="glyphicon glyphicon-user"></span> </a></li>

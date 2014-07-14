@@ -10,6 +10,8 @@
             <li><a href="registro_equipo"><span class="glyphicon glyphicon-file"></span>Equipo:</a></li>
             <li><a href="registro_posicion"><span class="glyphicon glyphicon-file"></span>Posici&oacute;n:</a></li>
             <li><a href="registro_integrante"><span class="glyphicon glyphicon-file"></span>Integrante:</a></li>
+            <li><a href="registro_entrenador"><span class="glyphicon glyphicon-file"></span>Entrenador:</a></li>
+            <li><a href="registro_jugador"><span class="glyphicon glyphicon-file"></span>Jugador:</a></li>
           </ul>          
         </div>
       <!-- </div> -->

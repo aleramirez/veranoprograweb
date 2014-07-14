@@ -19,7 +19,7 @@
 
 	 <script type="text/javascript">
 	 	$(document).ready(function(){
-	 		$(".accountForm").fancybox({
+	 		$("#formreg").fancybox({
 	 			'autoScale':false,
 	 			'transitionIn':'none',
 	 			'transitionOut':'none',
@@ -66,6 +66,20 @@
                   validators: {
                       notEmpty: {
                          message: 'El idpais es requerido'
+                      }
+                  }
+              },
+              idintegrante: {
+                  validators: {
+                      notEmpty: {
+                         message: 'El idintegrante es requerido'
+                      }
+                  }
+              },
+              idposicion: {
+                  validators: {
+                      notEmpty: {
+                         message: 'El idposicion es requerido'
                       }
                   }
               },

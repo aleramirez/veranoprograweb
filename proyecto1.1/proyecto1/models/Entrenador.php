@@ -1,6 +1,6 @@
 <?php
 
-class Usuario extends Modelo{
+class Entrenador extends Modelo{
     public $nombre_tabla = 'entrenador';
     public $pk = 'identrenador';
     
@@ -37,7 +37,7 @@ class Usuario extends Modelo{
 
         $er = new Er();
         
-        if ( !$er->valida_email($valor) ){
+        if ( !$er->valida_ids($valor) ){
             $this->errores[] = "Este idpais (".$valor.") no es valido";
 
         $this->idpais = trim($valor);

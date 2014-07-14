@@ -1,6 +1,6 @@
 <?php
 
-class Usuario extends Modelo{
+class Pais extends Modelo{
     public $nombre_tabla = 'pais';
     public $pk = 'idpais';
     
@@ -39,7 +39,7 @@ class Usuario extends Modelo{
 
         $er = new Er();
         
-        if ( !$er->valida_email($valor) ){
+        if ( !$er->valida_nombre($valor) ){
             $this->errores[] = "Este nombre (".$valor.") no es valido";
         }
             $this->nombre = trim($valor);
@@ -55,7 +55,7 @@ class Usuario extends Modelo{
 
         $er = new Er();
         
-        if ( !$er->valida_email($valor) ){
+        if ( !$er->valida_imagenes($valor) ){
             $this->errores[] = "Esta bandera (".$valor.") no es valida";
 
         $this->bandera = trim($valor);
@@ -71,7 +71,7 @@ class Usuario extends Modelo{
 
         $er = new Er();
         
-        if ( !$er->valida_email($valor) ){
+        if ( !$er->valida_ids($valor) ){
             $this->errores[] = "Este idcontinente (".$valor.") no es valido";
 
         $this->idcontinente = trim($valor);
