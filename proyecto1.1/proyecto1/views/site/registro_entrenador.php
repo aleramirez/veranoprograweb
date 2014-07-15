@@ -1,35 +1,45 @@
- <?php include ('../layouts/header.php'); ?>
- 
-      <div class="row">
+<?php 
 
-        <div class="col-md-4" id="col1">
-          <h2>Registro Entrenador</h2>
-            
-            <!-- <a class="btn btn-default" href="#" role="button">Formulario Equipo</a> -->
-            <br />
-                <form id="formreg" method="post" class="form-horizontal">
-                  
-                  <div class="form-group">
-                     <label for="idpais">Pa&iacute;s:</label>
-                      <select class="form-control">
-                            <option>Elige uno:</option>
-                              <option>1</option>
-                              <option>2</option>
-                              <option>3</option>
-                              <option>4</option>
-                              <option>5</option>
-                      </select>
-                  </div>
+  include ('../../libs/adodb5/adodb-pager.inc.php');
+  include ('../../libs/adodb5/adodb.inc.php');
+  include ('../../models/Conexion.php');
+  include ('../../models/Modelo.php');
+  include ('../../models/Entrenador.php');
+  include ('../../controllers/EntrenadorController.php');
+  include ('../../libs/Er.php');
+  include ('../layouts/header.php'); 
+  
+  if (isset($_POST['idpais'])) {
+    $entrenadorC = new EntrenadorController();
+    $entrenadorC->insertaEntrenador($_POST);
+  }
+?>
 
 
-                  <button type="button" class="btn btn-primary">Validar</button>
+    <div class="row">
+      <div class="col-md-10">
+        <h4>Registro Entrenador:</h4>
+        <form id="formregistro" method="POST" class="form-horizontal">
+
+          <div class="form-group">
+           <div class="form-group">
+            <label class="col-lg-3 control-label" for="idpais">Id Pa&iacute;s</label>
+            <div class="col-lg-5">
+                <input type="text" class="form-control" name="idpais" id="idpais" />
+            </div>
+          </div>
+          </div>
+
+         
+           
+        <input type="submit" name="Guardar" value="Guardar" />
+        </form>  
 
 
+    </div>
+    </div>
+  
+</div>
 
-                </form>
-
-         </div>
-
-       </div>
 
 <?php include ('../layouts/footer.php'); ?>

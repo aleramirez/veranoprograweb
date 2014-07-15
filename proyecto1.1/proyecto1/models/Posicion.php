@@ -53,7 +53,7 @@ class Posicion extends Modelo{
 
         $er = new Er();
         
-        if ( !$er->valida_email($valor) ){
+        if ( !$er->valida_abreviatura($valor) ){
             $this->errores[] = "Esta abreviatura (".$valor.") no es valida";
 
         $this->abreviatura= trim($valor);

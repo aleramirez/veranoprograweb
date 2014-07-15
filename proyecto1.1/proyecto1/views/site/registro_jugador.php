@@ -1,55 +1,50 @@
- <?php include ('../layouts/header.php'); ?>
- 
-      <div class="row">
+<?php 
+  include ('../../libs/adodb5/adodb-pager.inc.php');
+  include ('../../libs/adodb5/adodb.inc.php');
+  include ('../../models/Conexion.php');
+  include ('../../models/Modelo.php');
+  include ('../../models/Jugador.php');
+  include ('../../controllers/jugadorController.php');
+  include ('../../libs/Er.php');
+  include ('../layouts/header.php'); 
+  
+  if (isset($_POST['numero'])) {
+    $jugadorC = new JugadorController();
+    $jugadorC->insertaJugador($_POST);
+  }
+?>
 
-        <div class="col-md-4" id="col1">
-          <h2>Registro Jugadorr</h2>
-            
-            <!-- <a class="btn btn-default" href="#" role="button">Formulario Equipo</a> -->
-            <br />
-                <form id="formreg" method="post" class="form-horizontal">
-                  
-                   <div class="form-group">
-                      <label for="numero">N&uacute;mero:</label>
-                      <input type="text" class="form-control" id="numero" placeholder="Enter numero">
-                  </div>
+    <div class="row">
+      <div class="col-md-10">
+        <h4>Registro Jugador</h4>
+        <form id="formregistro" method="POST" class="form-horizontal">
+          <div class="form-group">
+            <label class="col-lg-3 control-label" for="numero">N&uacute;mero:</label>
+            <div class="col-lg-5">
+                <input type="text" class="form-control" name="numero" />
+            </div>
+          </div>
 
-                  <div class="form-group">
-                     <label for="idintegrante">Integrante:</label>
-                      <select class="form-control">
-                            <option>Elige uno:</option>
-                              <option>1</option>
-                              <option>2</option>
-                              <option>3</option>
-                              <option>4</option>
-                              <option>5</option>
-                      </select>
-                  </div>
-
-                  <div class="form-group">
-                     <label for="idposicion">Posici&oacute;n:</label>
-                      <select class="form-control">
-                            <option>Elige uno:</option>
-                              <option>1</option>
-                              <option>2</option>
-                              <option>3</option>
-                              <option>4</option>
-                              <option>5</option>
-                      </select>
-                  </div>
-
-
-
-
-
-                  <button type="button" class="btn btn-primary">Validar</button>
+          <div class="form-group">
+              <label class="col-lg-3 control-label" for="idintegrante">Id Integrante:</label>
+              <div class="col-lg-5">
+                  <input type="text" class="form-control" name="idintegrante" id="idintegrante" />
+              </div>
+          </div>
+            <div class="form-group">
+              <label class="col-lg-3 control-label" for="idposicion">Posici&oacute;n:</label>
+              <div class="col-lg-4">
+                  <input type="file" class="form-control" name="idposicion" id="idposicion"/>
+            </div>
+          </div>
+        <input type="submit" name="Guardar" value="Guardar" />
+        </form>  
 
 
+    </div>
+    </div>
+  
+</div>
 
-                </form>
-
-         </div>
-
-       </div>
 
 <?php include ('../layouts/footer.php'); ?>

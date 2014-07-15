@@ -1,45 +1,50 @@
- <?php include ('../layouts/header.php'); ?>
- 
-      <div class="row">
+<?php 
+  include ('../../libs/adodb5/adodb-pager.inc.php');
+  include ('../../libs/adodb5/adodb.inc.php');
+  include ('../../models/Conexion.php');
+  include ('../../models/Modelo.php');
+  include ('../../models/Equipo.php');
+  include ('../../controllers/EquipoController.php');
+  include ('../../libs/Er.php');
+  include ('../layouts/header.php'); 
+  
+  if (isset($_POST['nombre'])) {
+    $equipoC = new EquipoController();
+    $equipoC->insertaEquipo($_POST);
+  }
+?>
 
-        <div class="col-md-4" id="col1">
-          <h2>Registro Equipo</h2>
-            
-            <!-- <a class="btn btn-default" href="#" role="button">Formulario Equipo</a> -->
-            <br />
-                <form id="formreg" method="post" class="form-horizontal">
-                  
-                  <div class="form-group">
-                      <label for="nombre">Nombre:</label>
-                      <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Enter nombre">
-                  </div>
+    <div class="row">
+      <div class="col-md-10">
+        <h4>Registro Equipo</h4>
+        <form id="formregistro" method="POST" class="form-horizontal">
+          <div class="form-group">
+            <label class="col-lg-3 control-label" for="nombre">Nombre</label>
+            <div class="col-lg-5">
+                <input type="text" class="form-control" name="nombre" id="nombre"/>
+            </div>
+          </div>
 
-                  <div class="form-group">
-                      <label for="id_pais">Pa&iacute;s:</label>
-                      <select class="form-control">
-                            <option>Elige uno:</option>
-                              <option>1</option>
-                              <option>2</option>
-                              <option>3</option>
-                              <option>4</option>
-                              <option>5</option>
-                      </select>
-                  </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label" for="idpais">Id_pais</label>
+            <div class="col-lg-5">
+                <input type="text" class="form-control" name="idpais" id="idpais" />
+            </div>
+          </div>
 
-                   <div class="form-group">
-                      <label for="escudo">Escudo:</label>
-                      <input type="file" class="form-control" id="escudo" placeholder="Enter escudo">
-                  </div>
+          <div class="form-group">
+              <label class="col-lg-3 control-label" for="escudo">escudo</label>
+              <div class="col-lg-4">
+                  <input type="file" class="form-control" name="escudo" id="escudo"/>
+              </div>
+          </div>
+          <input type="submit" name="Guardar" value="Guardar" />
+        </form>
 
+      </div>
+    </div>
+  
+</div>
 
-                  <button type="button" class="btn btn-primary">Validar</button>
-
-
-
-                </form>
-
-         </div>
-
-       </div>
 
 <?php include ('../layouts/footer.php'); ?>

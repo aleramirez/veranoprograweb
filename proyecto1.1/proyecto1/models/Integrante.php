@@ -63,11 +63,12 @@ class Integrante extends Modelo{
 
         $er = new Er();
         
-        if ( !$er->valida_email($valor) ){
+        if ( !$er->valida_apellido($valor) ){
             $this->errores[] = "Este apellido (".$valor.") no es valido";
 
         $this->apellido = trim($valor);
         }
+    }
 
     public function get_peso(){
         return $this->peso;
@@ -77,10 +78,11 @@ class Integrante extends Modelo{
 
         $er = new Er();
         
-        if ( !$er->valida_email($valor) ){
+        if ( !$er->valida_peso($valor) ){
             $this->errores[] = "Este peso (".$valor.") no es valido";
 
         $this->peso = trim($valor);
+        }
     }
 
     public function get_estatura(){
@@ -91,9 +93,9 @@ class Integrante extends Modelo{
 
         $er = new Er();
         
-        if ( !$er->valida_email($valor) ){
+        if ( !$er->valida_estatura($valor) ){
             $this->errores[] = "Esta estatura (".$valor.") no es valida";
-
+        }
         $this->estatura = trim($valor);
     }
 
@@ -105,9 +107,9 @@ class Integrante extends Modelo{
 
         $er = new Er();
         
-        if ( !$er->valida_email($valor) ){
+        if ( !$er->valida_imagen($valor) ){
             $this->errores[] = "Esta foto (".$valor.") no es valida";
-
+        }
         $this->foto = trim($valor);
     }
 
@@ -119,15 +121,15 @@ class Integrante extends Modelo{
 
         $er = new Er();
         
-        if ( !$er->valida_email($valor) ){
+        if ( !$er->valida_edad($valor) ){
             $this->errores[] = "Esta Edad (".$valor.") no es valida";
-
+        }
         $this->Edad = trim($valor);
         }
     
     }
 
-    public function get_idequipo(){
+    /*public function get_idequipo(){
         return $this->idequipo;
     }
     
@@ -137,8 +139,10 @@ class Integrante extends Modelo{
         
         if ( !$er->valida_email($valor) ){
             $this->errores[] = "Este idequipo (".$valor.") no es valido";
-
+        }
         $this->idequipo= trim($valor);
     }
+*/
+
 
 ?>

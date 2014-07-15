@@ -43,5 +43,6 @@ class Entrenador extends Modelo{
         $this->idpais = trim($valor);
     }
 
-
+}
+}
 ?>

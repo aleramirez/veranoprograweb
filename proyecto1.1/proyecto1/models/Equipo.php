@@ -56,24 +56,25 @@ class Equipo extends Modelo{
         
         if ( !$er->valida_ids($valor) ){
             $this->errores[] = "Este idpais (".$valor.") no es valido";
-
+        }
         $this->idpais = trim($valor);
+    
     }
 
     public function get_escudo(){
-        return $this->idpais;
+        return $this->escudo;
     }
     
     public function set_escudo($valor){
 
         $er = new Er();
         
-        if ( !$er->valida_imagenes($valor) ){
+        if ( !$er->valida_imagen($valor) ){
             $this->errores[] = "Este escudo (".$valor.") no es valido";
+        }
 
         $this->escudo = trim($valor);
-    }
     
-}
+    }
 
 ?>

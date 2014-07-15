@@ -41,7 +41,5 @@ class Continente extends Modelo{
             $this->nombre = trim($valor);
         
     }
-
-    
-
+}
 ?>

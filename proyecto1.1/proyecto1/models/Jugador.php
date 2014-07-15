@@ -39,7 +39,7 @@ class Jugador extends Modelo{
 
         $er = new Er();
         
-        if ( !$er->valida_numero($valor) ){
+        if ( !$er->valida_numeros($valor) ){
             $this->errores[] = "Este numero (".$valor.") no es valido";
         }
             $this->numero = trim($valor);
@@ -56,7 +56,7 @@ class Jugador extends Modelo{
         
         if ( !$er->valida_ids($valor) ){
             $this->errores[] = "Este idintegrante (".$valor.") no es valido";
-
+        }
         $this->idintegrante = trim($valor);
     }
 
@@ -70,10 +70,11 @@ class Jugador extends Modelo{
         
         if ( !$er->valida_ids($valor) ){
             $this->errores[] = "Este idposicion (".$valor.") no es valido";
-
+        }
         $this->idposicion = trim($valor);
         }
         
     }
+
 
 ?>

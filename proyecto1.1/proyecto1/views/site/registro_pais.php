@@ -1,47 +1,36 @@
- <?php include ('../layouts/header.php'); ?>
- 
-      <div class="row">
+<?php include ('../layouts/header.php'); ?>
 
-        <div class="col-md-4" id="col1">
-          <h2>Registro Pa&iacute;s</h2>
-            
-            <!-- <a class="btn btn-default" href="#" role="button">Formulario Equipo</a> -->
-            <br />
-                <form id="formreg" method="post" class="form-horizontal">
-                  
-                  <div class="form-group">
-                      <label for="nombre">Nombre:</label>
-                      <input type="text" class="form-control" id="nombre" placeholder="Enter nombre">
-                  </div>
+    <div class="row">
+      <div class="col-md-10">
+        <h4>Registro Pais</h4>
+        <form id="formregistro" method="POST" class="form-horizontal">
+          <div class="form-group">
+            <label class="col-lg-3 control-label" for="nombre">Nombre</label>
+            <div class="col-lg-5">
+                <input type="text" class="form-control" name="nombre" />
+            </div>
+          </div>
 
-                  
-                   <div class="form-group">
-                      <label for="bandera">Bandera:</label>
-                      <input type="file" class="form-control" id="bandera" placeholder="Enter escudo">
-                  </div>
-
-                  <div class="form-group">
-                      <label for="idcontinente">Pa&iacute;s:</label>
-                      <select class="form-control">
-                            <option>Elige uno:</option>
-                              <option>1</option>
-                              <option>2</option>
-                              <option>3</option>
-                              <option>4</option>
-                              <option>5</option>
-                      </select>
-                  </div>
+          <div class="form-group">
+              <label class="col-lg-3 control-label" for="idcontinente">Id_continente</label>
+              <div class="col-lg-5">
+                  <input type="text" class="form-control" name="idcontinente" id="idcontinente" />
+              </div>
+          </div>
+            <div class="form-group">
+              <label class="col-lg-3 control-label" for="bandera">Bandera</label>
+              <div class="col-lg-4">
+                  <input type="file" class="form-control" name="bandera" id="bandera"/>
+            </div>
+          </div>
+        <input type="submit" name="Guardar" value="Guardar" />
+        </form>  
 
 
+    </div>
+    </div>
+  
+</div>
 
-                  <button type="button" class="btn btn-primary">Validar</button>
-
-
-
-                </form>
-
-         </div>
-
-       </div>
 
 <?php include ('../layouts/footer.php'); ?>

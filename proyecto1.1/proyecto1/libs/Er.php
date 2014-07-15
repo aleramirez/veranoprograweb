@@ -37,6 +37,36 @@ class Er {
             }
     }
 
+    public function valida_peso($valor){
+         if(preg_match("/^(^[0-9][0-9].[0-9][0-9]$)+$/",$valor))
+        {
+          return true;
+        }
+            else{
+                return false;
+            }
+    }
+
+    public function valida_estatura($valor){
+        if(preg_match("/^(^[0-1].[0-9][0-9]$)+$/",$valor))
+        {
+          return true;
+        }
+            else{
+                return false;
+            }
+    }
+
+    public function valida_edad($valor){
+        if(preg_match("/^(^[0-9][0-9]$)+$/",$valor))
+        {
+          return true;
+        }
+        else{
+            return false;
+            }
+    }
+
     public function valida_rfc($valor){
         if(preg_match("/^([A-Z,Ñ,&]{3,4}[0-9]{2}[0-1][0-9][0-3][0-9][A-Z,0-9]?[A-Z,0-9]?[0-9,A-Z]?)+$/",$valor))
                 return true;
@@ -53,15 +83,32 @@ class Er {
             }
     }
 
-    public function valida_numero($valor){     
-        if(preg_match("/^(^([0-9]$)+$/",$valor))
+    public function valida_numeros($valor){
+        $exp_reg = "/^[[:digit:]]+$/"; 
+        if (preg_match($exp_reg, $valor)) {
+             return true;
+        } else { 
+             return false;
+        } 
+    }
+
+       public function valida_nombre($valor){
+        if(preg_match("/^([a-zA-ZñÑ\s]{2,50})+$/",$valor))
                 return true;
             else{
                 return false;
             }
     }
 
-       public function valida_nombre($valor){
+      public function valida_abreviatura($valor){
+        if(preg_match("/^([a-zA-ZñÑ\s]{2})+$/",$valor))
+                return true;
+            else{
+                return false;
+            }
+    }
+
+     public function valida_apellido($valor){
         if(preg_match("/^([a-zA-ZñÑ\s]{2,50})+$/",$valor))
                 return true;
             else{
@@ -131,13 +178,15 @@ class Er {
             else{
                 return false;
             }
-    }public function valida_cp($valor){     
+    }
+
+   /* public function valida_cp($valor){     
         if(preg_match("/^(^([1-9]{2}|[0-9][1-9]|[1-9][0-9])[0-9]{3}$)+$/",$valor))
                 return true;
             else{
                 return false;
             }
-    }
+    }*/
 
     public function valida_abre($valor){     
         if(preg_match("/^(^([1-9]{2}|[0-9][1-9]|[1-9][0-9])[0-9]{3}$)+$/",$valor))
@@ -147,15 +196,23 @@ class Er {
             }
     }
 
+     public function valida_imagen($valor){     
+        if(preg_match("/^(^(gif|jpe?g|png)$%i)+$/",$valor))
+                return true;
+            else{
+                return false;
+            }
+    }
 
 
+/*
 	// Cadena de texto a evaluar
 	$nombre_fichero = "vacaciones001.jpg";
 	// Sólo se permiten gif, jpg ó jpeg y png
 	// sin sensibilidad a letras mayúsculas ni minúsculas
 	$patron = "%\.(gif|jpe?g|png)$%i";
 	// Ejemplo de visualización del resultado
-	echo preg_match($patron, $nombre) == 1 ? 'valido' : 'invalido';
+	echo preg_match($patron, $nombre) == 1 ? 'valido' : 'invalido';*/
 
 
 }

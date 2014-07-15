@@ -1,28 +1,40 @@
- <?php include ('../layouts/header.php'); ?>
- 
-      <div class="row">
-
-        <div class="col-md-4" id="col1">
-          <h2>Registro Continente</h2>
-            
-            <!-- <a class="btn btn-default" href="#" role="button">Formulario Equipo</a> -->
-            <br />
-                <form id="formreg" method="post" class="form-horizontal">
-                  
-                  <div class="form-group">
-                      <label for="nombre">Nombre:</label>
-                      <input type="text" class="form-control" id="nombre" placeholder="Enter nombre">
-                  </div>
+<?php 
 
 
-                  <button type="button" class="btn btn-primary">Validar</button>
+  include ('../../libs/adodb5/adodb-pager.inc.php');
+  include ('../../libs/adodb5/adodb.inc.php');
+  include ('../../models/Conexion.php');
+  include ('../../models/Modelo.php');
+  include ('../../models/Continente.php');
+  include ('../../controllers/ContinenteController.php');
+  include ('../../libs/Er.php');
+  include ('../layouts/header.php'); 
+  
+  if (isset($_POST['nombre'])) {
+    $continenteC = new ContinenteController();
+    $continenteC->insertaContinente($_POST);
+  }
+?>
 
 
 
-                </form>
+    <div class="row">
+      <div class="col-md-10">
+        <h4>Registro Continente</h4>
+        <form id="formregistro" method="POST" class="form-horizontal">
+          <div class="form-group">
+            <label class="col-lg-3 control-label" for="nombre">Nombre:</label>
+            <div class="col-lg-5">
+                <input type="text" class="form-control" name="nombre" id="nombre"/>
+            </div>
+          </div>
+          <input type="submit" name="Guardar" value="Guardar" />
+        </form>  
 
-         </div>
+      </div>
+    </div>
+  
+</div>
 
-       </div>
 
 <?php include ('../layouts/footer.php'); ?>
