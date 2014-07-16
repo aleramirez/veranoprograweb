@@ -71,7 +71,7 @@ class Revista extends Modelo{
 
         $er = new Er();
         
-        if ( !$er->valida_imagen($valor) ){
+        if ( !$er->valida_imagen1($valor) ){
             $this->errores[] = "Esta portada (".$valor.") no es valida";
         }
         $this->portada = trim($valor);
@@ -205,6 +205,24 @@ class Revista extends Modelo{
         $this->editorial = trim($valor);
     
     }
+
+     public function get_id_status(){
+        return $this->id_status;
+    }
+
+     public function set_id_status($valor){
+
+        $er = new Er();
+        
+        if ( !$er->valida_numeros($valor) ){
+            $this->errores[] = "Este id_status (".$valor.") no es valido";
+        }
+
+        $this->id_status = trim($valor);
+    
+    }
+
+
 
 }
 

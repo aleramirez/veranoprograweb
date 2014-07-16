@@ -14,10 +14,10 @@
 			
 			if (count($status->errores)>0) {
 				print_r($status->errores);
+				die();
 			}
 
-			die();
-
+				$status->inserta($status->get_atributos());
 		}
 
 	}

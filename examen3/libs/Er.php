@@ -141,7 +141,7 @@ class Er {
     }
 
         public function valida_fecha($valor){
-        if(preg_match("/^(^\d{1,2}\/\d{1,2}\/\d{2,4}$)+(^[0-2][0-3]:[0-5][0-9]$)+(^[0-2][0-3]:[0-5][0-9]$)+$/",$valor))
+        if(preg_match("/^(^\d{1,2}\/\d{1,2}\/\d{2,4}$)+$/",$valor))
                 return true;
             else{
                 return false;
@@ -206,6 +206,15 @@ class Er {
 
      public function valida_imagenn($valor){  
         $exp_reg = "%\.(pdf)$%i";  
+        if (preg_match($exp_reg, $valor)) {
+             return true;
+        } else { 
+             return false;
+        }           
+    }
+
+    public function valida_imagen1($valor){  
+        $exp_reg = "%\.(jpg)$%i";  
         if (preg_match($exp_reg, $valor)) {
              return true;
         } else { 

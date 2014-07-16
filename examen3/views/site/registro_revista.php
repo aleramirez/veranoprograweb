@@ -40,7 +40,7 @@
                 <div class='input-group date' id='fecharev'>
                 <input type="text" class="form-control" name="fecha" id="fecha"/>
                 <span class="input-group-addon">
-                    <span class="glyphicon glyphicon-calendar"></span>
+                    <span class="glyphicon glyphicon-time"></span>
                 </span>
                 </div>
                 <span class="help-block">Formato sugerido para este campo:MM/DD/YYYY h:m </span>
@@ -96,6 +96,14 @@
                 <input type="text" class="form-control" name="editorial" id="editorial"/>
             </div>
           </div>
+
+          <div class="form-group">
+            <label class="col-lg-3 control-label" for="id_status">Status:</label>
+            <div class="col-lg-3">
+                <input type="text" class="form-control" name="id_status" id="status"/>
+            </div>
+          </div>
+
             <input type="submit" name="Guardar" value="Guardar" />
           </div>
           

@@ -198,6 +198,13 @@
                               }
                           }
                       }, 
+                  id_status: {
+                          validators: {
+                              notEmpty: {
+                                  message: 'El id_status es requerido.'
+                              }
+                          }
+                      }, 
                   conclusiones: {
                           validators: {
                               notEmpty: {
@@ -246,6 +253,22 @@
           }
       });
    </script>
+
+   <script type="text/javascript">
+            $(function () {
+                $('#fecharev').datetimepicker({
+                    pickTime: false
+                });
+            });
+    </script>
+
+    <script type="text/javascript">
+            $(function () {
+                $('#fechaarti').datetimepicker({
+                    pickTime: false
+                });
+            });
+        </script>
 
   <script>
    $(document).ready(function() {

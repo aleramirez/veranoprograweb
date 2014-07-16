@@ -14,7 +14,7 @@ class Conexion {
     
     function Conexion(){
         $this->db = ADONewConnection('mysql');
-        $this->db->debug = false;
+        $this->db->debug = true;
 			       //ip     user      pass    bd
         $this->db->Connect('localhost','revista_1507','1507','revista');
 

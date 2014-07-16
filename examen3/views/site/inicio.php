@@ -7,7 +7,7 @@
                 <div class='input-group date' id='fechaform'>
                   <input type="text" class="form-control" name="meeting" />
                   <span class="input-group-addon">
-                    <span class="glyphicon glyphicon-calendar"></span>
+                    <span class="glyphicon glyphicon-time"></span>
                   </span>
                 </div>
                 <span class="help-block">Formato sugerido para este campo:MM/DD/YYYY h:m </span>
@@ -45,18 +45,18 @@
           <div class="col-md-5">
               <a href="#"><img src="../site/images/ife.jpg" align="center" width="50%" height="50%"></a>
               <a href="#">Termina etapa IFE<span class="glyphicon glyphicon-chevron-right"></span></a>
-          <br />
+          
         </div>
 
-        <br />
-        <br />
-        <br />
+        <br >
+        <br >
+        <br >
 
-         <div class="col-md-5">
+          <div class="col-md-5"> 
               <a href="#"><img src="../site/images/jugadas.jpg" align="center" width="50%" height="50%"></a>
               <a href="#">5 Jugadas que marcaron Brasil<span class="glyphicon glyphicon-chevron-right"></span></a>
-          <br />
-        </div>
+         <!--  <br /> -->
+         </div> 
 
       </div>
 

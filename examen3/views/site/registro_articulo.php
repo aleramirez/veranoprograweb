@@ -71,7 +71,7 @@
                 <div class='input-group date' id='fechaarti'>
                     <input type="text" class="form-control" name="fecha_creacion" id="fecha_creacion"/>
                     <span class="input-group-addon">
-                      <span class="glyphicon glyphicon-calendar"></span>
+                      <span class="glyphicon glyphicon-time"></span>
                     </span>
                 </div>
                   <span class="help-block">Formato sugerido para este campo:MM/DD/YYYY h:m </span>
@@ -83,6 +83,13 @@
             <label class="col-lg-3 control-label" for="archivo_pdf">Archivo PDF:</label>
             <div class="col-lg-5">
                 <input type="file" class="form-control" name="archivo_pdf" id="archivo_pdf"/>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-lg-3 control-label" for="id_status">Status:</label>
+            <div class="col-lg-3">
+                <textarea type="text" class="form-control" name="id_status" id="id_status"></textarea>
             </div>
           </div>
 
