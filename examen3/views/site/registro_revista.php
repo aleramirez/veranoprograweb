@@ -96,14 +96,6 @@
                 <input type="text" class="form-control" name="editorial" id="editorial"/>
             </div>
           </div>
-
-          <div class="form-group">
-            <label class="col-lg-3 control-label" for="id_status">Status:</label>
-            <div class="col-lg-3">
-                <input type="text" class="form-control" name="id_status" id="status"/>
-            </div>
-          </div>
-
             <input type="submit" name="Guardar" value="Guardar" />
           </div>
           

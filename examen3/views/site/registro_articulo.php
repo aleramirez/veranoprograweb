@@ -87,13 +87,6 @@
           </div>
 
           <div class="form-group">
-            <label class="col-lg-3 control-label" for="id_status">Status:</label>
-            <div class="col-lg-3">
-                <textarea type="text" class="form-control" name="id_status" id="id_status"></textarea>
-            </div>
-          </div>
-
-          <div class="form-group">
             <label class="col-lg-3 control-label" for="conclusiones">Conclusiones:</label>
             <div class="col-lg-3">
                 <textarea type="text" class="form-control" name="conclusiones" id="conclusiones"></textarea>

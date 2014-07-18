@@ -14,7 +14,6 @@ class Articulo extends Modelo{
         'contenido'=>array(),
         'fecha_creacion'=>array(),
         'archivo_pdf'=>array(),
-        'id_status'=>array(),
         'conclusiones'=>array(),
         'agradecimientos'=>array(),
         'referencias'=>array(),
@@ -31,7 +30,6 @@ class Articulo extends Modelo{
     private $contenido;
     private $fecha_creacion;
     private $archivo_pdf;
-    private $id_status;
     private $conclusiones;
     private $agradecimientos;
     private $editorial;
@@ -173,22 +171,6 @@ class Articulo extends Modelo{
         }
 
         $this->archivo_pdf = trim($valor);
-    
-    }
-
-    public function get_id_status(){
-        return $this->id_status;
-    }
-
-     public function set_id_status($valor){
-
-        $er = new Er();
-        
-        if ( !$er->valida_numeros($valor) ){
-            $this->errores[] = "Esto (".$valor.") no es valido";
-        }
-
-        $this->id_status = trim($valor);
     
     }
 

@@ -18,17 +18,16 @@
 			$articulo->set_contenido($datos['contenido']);
 			$articulo->set_fecha_creacion($datos['fecha_creacion']);
 			$articulo->set_archivo_pdf($datos['archivo_pdf']);
-			$articulo->set_id_status($datos['id_status']);
 			$articulo->set_conclusiones($datos['conclusiones']);
 			$articulo->set_agradecimientos($datos['agradecimientos']);
 			$articulo->set_referencias($datos['referencias']);
 
 			if (count($articulo->errores)>0) {
 				print_r($articulo->errores);
-				die();
 			}
 
-			$articulo->inserta($articulo->get_atributos());
+			die();
+
 		}
 
 	}

@@ -20,13 +20,12 @@
 			$revista->set_clave($datos['clave']);
 			$revista->set_directorio($datos['directorio']);
 			$revista->set_editorial($datos['editorial']);
-			$revista->set_id_status($datos['id_status']);
 
 			if (count($revista->errores)>0) {
 				print_r($revista->errores);
-				die();
 			}
-				$revista->inserta($revista->get_atributos());
+
+			die();
 
 		}
 

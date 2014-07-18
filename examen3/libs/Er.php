@@ -213,15 +213,6 @@ class Er {
         }           
     }
 
-    public function valida_imagen1($valor){  
-        $exp_reg = "%\.(jpg)$%i";  
-        if (preg_match($exp_reg, $valor)) {
-             return true;
-        } else { 
-             return false;
-        }           
-    }
-
 /*
 	// Cadena de texto a evaluar
 	$nombre_fichero = "vacaciones001.jpg";
